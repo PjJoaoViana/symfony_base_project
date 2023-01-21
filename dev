@@ -5,6 +5,14 @@ sc() {
       docker exec php symfony console "$1"
 }
 
+composer() {
+      docker exec php composer "$1"
+}
+
+unit_tests() {
+      docker exec php php bin/phpunit
+}
+
 if declare -f "$1" > /dev/null
 then
   # call arguments verbatim
