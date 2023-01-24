@@ -37,3 +37,12 @@ services:
     depends_on:
       - php
       - database
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./docker/jenkins_home:/var/jenkins_home
+  ssh-agent:
+    image: jenkins/ssh-agent

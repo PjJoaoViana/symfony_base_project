@@ -9,7 +9,16 @@ composer() {
       docker exec php composer "$1"
 }
 
-unit_tests() {
+analyseCodeAndTests() {
+      docker exec php vendor/bin/phpstan analyse  src/  tests/
+
+}
+
+analyseCode() {
+      docker exec php vendor/bin/phpstan analyse  src/ --level 9
+}
+
+unitTests() {
       docker exec php php bin/phpunit
 }
 

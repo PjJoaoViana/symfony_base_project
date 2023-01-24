@@ -14,20 +14,19 @@ class QuoteControllerTest extends WebTestCase
         parent::setUp();
 
         $container = self::getContainer();
-        $this->quoteRepository = $this->getMockBuilder(QuoteRepository::class)
+        $this->quoteRepositoryMock = $this->getMockBuilder(QuoteRepository::class)
             ->disableOriginalConstructor()
             ->onlyMethods(['findAll'])
             ->getMock();
 
-        $container->set('App\Repository\QuoteRepository', $this->quoteRepository);
+        $container->set('App\Repository\QuoteRepository', $this->quoteRepositoryMock);
     }
 
-
-    public function testSomeAction()
+    public function testSomeAction(): void
     {
         $client = static::$kernel->getContainer()->get('test.client');
 
-        $this->quoteRepository->method('findAll')->willReturn([
+        $this->quoteRepositoryMock->method('findAll')->willReturn([
             (new Quote())->setQuote('some quote')->setYear('2023')->setHistorian('some historian')
         ]);
 
