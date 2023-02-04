@@ -1,4 +1,8 @@
 /docker/mysql/
 /docker/jenkins_home/
+/app/vendor
+/app/var
 .*
 !/.gitignore
+!/.env
+!/.env.local

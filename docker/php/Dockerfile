@@ -17,3 +17,7 @@ RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 
 RUN git config --global user.email "joao.viana.it@gmail.com"  \
     && git config --global user.name "joao viana"
+
+#CMD bash -c "composer install && symfony console --no-interaction doctrine:migrations:migrate"
+
+#ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
