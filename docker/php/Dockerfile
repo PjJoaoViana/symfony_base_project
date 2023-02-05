@@ -21,3 +21,12 @@ RUN git config --global user.email "joao.viana.it@gmail.com"  \
 #CMD bash -c "composer install && symfony console --no-interaction doctrine:migrations:migrate"
 
 #ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
+
+#composer install
+#symfony console --no-interaction doctrine:migrations:migrate
+
+#apt install npm
+#composer require symfony/webpack-encore-bundle
+#npm install
+#npm install -D tailwindcss postcss autoprefixer postcss-loader
+#npx tailwindcss init -p
