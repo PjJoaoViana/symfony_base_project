@@ -5,6 +5,10 @@ sc() {
       docker exec php symfony console "$1"
 }
 
+watch() {
+      docker exec php npm run watch
+}
+
 composer() {
       docker exec php composer "$1"
 }
