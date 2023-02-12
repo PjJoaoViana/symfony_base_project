@@ -32,6 +32,7 @@ RUN git config --global user.email "joao.viana.it@gmail.com"  \
 #composer require symfony/webpack-encore-bundle
 
 #curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+#/root/.nvm/install.sh
 #nvm ls-remote
 #nvm ls-remote
 
