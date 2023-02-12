@@ -18,15 +18,23 @@ RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 RUN git config --global user.email "joao.viana.it@gmail.com"  \
     && git config --global user.name "joao viana"
 
+#ADD entrypoint.sh /var/www/symfony_docker
+
+#RUN chmod -R 777 /var/www
 #CMD bash -c "composer install && symfony console --no-interaction doctrine:migrations:migrate"
 
-#ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
+#ENTRYPOINT ["/bin/bash", "entrypoint.sh"]
 
 #composer install
 #symfony console --no-interaction doctrine:migrations:migrate
 
 #apt install npm
 #composer require symfony/webpack-encore-bundle
+
+#curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+#nvm ls-remote
+#nvm ls-remote
+
 #npm install
 #npm install -D tailwindcss postcss autoprefixer postcss-loader
 #npx tailwindcss init -p

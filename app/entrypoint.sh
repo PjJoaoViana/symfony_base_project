@@ -1,9 +1,7 @@
 #!/bin/sh
-until [ "`/usr/bin/docker inspect -f {{.State.Running}} nginx ==true`"=="true" ]; do
-    sleep 0.1;
-done;
-echo "ok entao"
 
-symfony console doctrine:migrations:migrate --no-interaction --allow-no-migration
-
-#composer install #&&
+apt install -y
+composer install --prefer-dist --no-scripts --no-autoloader
+symfony console --no-interaction doctrine:migrations:migrate
+apt install npm -y
+npm install -D tailwindcss postcss autoprefixer postcss-loader
